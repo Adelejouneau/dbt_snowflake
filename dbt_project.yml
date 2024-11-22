@@ -34,3 +34,10 @@ models:
     # Config indicated by + and applies to all files under models/example/
     example:
       +materialized: view
+      +tags:
+          - tag_covid
+          - star_schema
+          - exam_views
+
+on-run-start: "{{ auto_test(5) }}"
+on-run-end: "{{ auto_test(6) }}"

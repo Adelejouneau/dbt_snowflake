@@ -1,0 +1,26 @@
+version: 2
+
+sources:
+  - name: public        
+    database: EXAMEN     
+    schema: PUBLIC      
+    tables:
+      - name: ALBUM
+      - name: ARTIST
+      - name: GENRE
+      - name: MEDIATYPE
+      - name: PLAYLIST
+      - name: PLAYLISTTRACK
+      - name: TRACK
+
+  - name: star_schema    
+    database: EXAMEN     
+    schema: STAR_SCHEMA    
+    tables:
+      - name: DIMALBUM
+      - name: DIMARTIST
+      - name: DIMGENRE
+      - name: DIMMEDIATYPE
+      - name: DIMPLAYLIST
+      - name: FACTPLAYLISTTRACK
+      - name: FACTTRACK

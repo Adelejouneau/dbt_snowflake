@@ -1,4 +1,4 @@
-{{ config(materialized='view') }}
+{{ config(materialized='view', tags=['tag_covid']) }}
 
 with pop as (
     select * from {{ source('COVID19_Epidemiological_Data', 'DEMOGRAPHICS') }}
